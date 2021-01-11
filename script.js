@@ -103,11 +103,11 @@ function generatePassword() {
   }
 
   // Iterate through the password length, get random index from the array of available characters
-  for (var i = 0; i < passwordIncludes.length; i++) {
-    availableCharacters = getRandomChar(availableCharacters);
+  for (var i = 0; i < passwordIncludes.passwordLength; i++) {
+    var c = getRandomChar(availableCharacters);
 
     // add characters to password array
-    createdPassword.push(availableCharacters);
+    createdPassword.push(c);
   }
   
   return createdPassword.join("");
